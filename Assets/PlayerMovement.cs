@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    [SerializeField] private float speed; // Declare most variables like this!
+    [SerializeField] private float jumpSpeed;
+
+    [SerializeField] private Rigidbody rb;
+
+    [SerializeField] private Transform mainCamera;
+
+    private Vector2 playerInput;
+
+    private void Awake()
+    {
+    }
+    private void Update()
+    {
+        playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxis("Vertical"));
+        playerInput.Normalize();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpSpeed, rb.velocity.y);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        // rb.velocity = new Vector3(playerInput.x * speed, rb.velocity.y, playerInput.y * speed);
+        Vector3 moveDir = (playerInput.y * mainCamera.forward) + (playerInput.x * mainCamera.right);
+        moveDir.Normalize();
+        rb.velocity = new Vector3(moveDir.x * speed, rb.velocity.y, moveDir.z * speed);
+    }
+}
