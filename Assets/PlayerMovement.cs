@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform mainCamera;
 
+    [SerializeField] private Text txtbox;
+
     private Vector2 playerInput;
 
     private void Awake()
@@ -30,10 +32,12 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
             speed = dash_speed;
+            txtbox.text = "Dashing";
         }
 
         else {
             speed = reg_speed;
+            txtbox.text = "Walking";
         }
     }
 
