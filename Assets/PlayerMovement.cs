@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private float dash_speed; // Declare most variables like this!
+    [SerializeField] private float reg_speed; // Declare most variables like this!
     [SerializeField] private float speed; // Declare most variables like this!
     [SerializeField] private float jumpSpeed;
 
@@ -24,6 +26,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpSpeed, rb.velocity.y);
+        }
+        
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+            speed = dash_speed;
+        }
+
+        else {
+            speed = reg_speed;
         }
     }
 
