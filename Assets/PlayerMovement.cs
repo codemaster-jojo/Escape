@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform mainCamera;
 
-    [SerializeField] private Text txtbox;
+    [SerializeField] private TextMeshProUGUI txtbox;  
 
     private Vector2 playerInput;
 
