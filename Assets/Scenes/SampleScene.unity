@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 660306626}
   - component: {fileID: 660306625}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -731,7 +731,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7e2dee5e168434c938000fa1626b0bb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -770,8 +770,8 @@ Transform:
   m_GameObject: {fileID: 660306624}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1844397, y: 5, z: -13.956955}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -3.1844, y: 10, z: -13.956955}
+  m_LocalScale: {x: 85.09845, y: 20, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   dash_speed: 15
   reg_speed: 10
   speed: 10
-  jumpSpeed: 20
+  jumpSpeed: 50
   rb: {fileID: 1506678111}
   mainCamera: {fileID: 330585546}
   txtbox: {fileID: 1386324299}

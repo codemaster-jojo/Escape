@@ -41,7 +41,11 @@ public class PlayerMovement : MonoBehaviour
             txtbox.text = "Walking";
         }
     }
-
+    private void OnCollisionEnter(Collision coll)
+    {
+        
+    } 
+    
     private void FixedUpdate()
     {
         // rb.velocity = new Vector3(playerInput.x * speed, rb.velocity.y, playerInput.y * speed);
