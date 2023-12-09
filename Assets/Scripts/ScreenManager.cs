@@ -24,4 +24,11 @@ public class ScreenManager : MonoBehaviour
             else Time.timeScale = 1.0f;
         }
     }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1.0f;
+        isPaused = false;
+        pauseScreen.SetActive(isPaused);
+    }
 }
