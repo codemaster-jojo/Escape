@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform mainCamera;
 
-    [SerializeField] private TextMeshProUGUI txtbox;  
 
     private Vector2 playerInput;
 
@@ -33,12 +31,10 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
             speed = dash_speed;
-            txtbox.text = "Dashing";
         }
 
         else {
             speed = reg_speed;
-            txtbox.text = "Walking";
         }
     }
     private void OnCollisionEnter(Collision coll)
