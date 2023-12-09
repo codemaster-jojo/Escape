@@ -487,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1506678116}
   offset: {x: 0, y: 0, z: 0}
-  mouseSensitivity: 2
+  mouseSensitivity: 200
   maxVerticalAngle: 90
 --- !u!1 &348980630
 GameObject:
@@ -793,6 +793,7 @@ GameObject:
   - component: {fileID: 567512256}
   - component: {fileID: 567512255}
   - component: {fileID: 567512254}
+  - component: {fileID: 567512258}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -884,6 +885,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &567512258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567512253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ea25bd7b2648da87b43d51745f6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 1861650835}
 --- !u!1 &660306624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f250cd26ea6c4386b8ed1f2f2b6ae04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedText: {fileID: 1386324299}
+  playerRb: {fileID: 1506678111}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1690,6 @@ MonoBehaviour:
   jumpSpeed: 10
   rb: {fileID: 1506678111}
   mainCamera: {fileID: 330585546}
-  txtbox: {fileID: 1386324299}
 --- !u!135 &1506678113
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1917,7 +1932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

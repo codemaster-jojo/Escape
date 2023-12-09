@@ -23,8 +23,8 @@ public class CameraFollow : MonoBehaviour
     {
 
         transform.position = player.position + offset;
-        rotX += mouseInput.x * mouseSensitivity;
-        rotY -= mouseInput.y * mouseSensitivity;
+        rotX += mouseInput.x * mouseSensitivity * Time.deltaTime;
+        rotY -= mouseInput.y * mouseSensitivity * Time.deltaTime;
         rotY = Mathf.Clamp(rotY, -maxVerticalAngle, maxVerticalAngle);
         transform.rotation = Quaternion.Euler(rotY, rotX, 0);
     }
