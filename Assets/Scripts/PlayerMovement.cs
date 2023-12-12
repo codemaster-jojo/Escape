@@ -13,11 +13,14 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform mainCamera;
 
+    [SerializeField] private Transform startPoint;
+
 
     private Vector2 playerInput;
 
     private void Awake()
     {
+        transform.position = startPoint.transform.position; // new Vector3(startPoint.transform.x, startPoint.transform.y, startPoint.transform.z);
     }
     private void Update()
     {

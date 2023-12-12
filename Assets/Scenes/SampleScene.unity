@@ -3217,6 +3217,7 @@ MonoBehaviour:
   jumpSpeed: 10
   rb: {fileID: 1506678111}
   mainCamera: {fileID: 330585546}
+  startPoint: {fileID: 158717747}
 --- !u!135 &1506678113
 SphereCollider:
   m_ObjectHideFlags: 0
