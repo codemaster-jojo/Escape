@@ -13,7 +13,8 @@ public class MainGameUI : MonoBehaviour
     {
         Vector3 velocity = playerRb.velocity;
 
-        float speed = (velocity.magnitude*100)/100;
+        int speed_int = (int)(velocity.magnitude * 100);
+        float speed = (float)(speed_int/100);
 
         speedText.text = speed.ToString() + "mps";
     }
