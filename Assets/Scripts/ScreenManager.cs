@@ -20,7 +20,9 @@ public class ScreenManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             isPaused = !isPaused;
             pauseScreen.SetActive(isPaused);
-            if (isPaused) Time.timeScale = 0f;
+            if (isPaused) {
+                Time.timeScale = 0f;
+            }
             else Time.timeScale = 1.0f;
         }
     }

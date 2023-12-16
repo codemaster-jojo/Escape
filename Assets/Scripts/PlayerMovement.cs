@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform mainCamera;
 
     [SerializeField] private Transform startPoint;
+    [SerializeField] private Transform endPoint;
 
 
     private Vector2 playerInput;
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision coll)
     {
-        
+        Debug.Log(coll, endPoint);
     } 
     
     private void FixedUpdate()
