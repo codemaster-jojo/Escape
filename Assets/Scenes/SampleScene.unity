@@ -3218,7 +3218,7 @@ MonoBehaviour:
   rb: {fileID: 1506678111}
   mainCamera: {fileID: 330585546}
   startPoint: {fileID: 158717747}
-  endPoint: {fileID: 831311133}
+  endPointName: Ending Point
 --- !u!135 &1506678113
 SphereCollider:
   m_ObjectHideFlags: 0

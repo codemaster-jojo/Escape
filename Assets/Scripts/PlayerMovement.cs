@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform mainCamera;
 
     [SerializeField] private Transform startPoint;
-    [SerializeField] private Transform endPoint;
+    [SerializeField] private string endPointName;
 
 
     private Vector2 playerInput;
@@ -41,9 +41,13 @@ public class PlayerMovement : MonoBehaviour
             speed = reg_speed;
         }
     }
-    private void OnCollisionEnter(Collision coll)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(coll, endPoint);
+        if (collision.gameObject.name == endPointName) 
+        {
+            Debug.Log("GAME WON!!!");
+        }
+
     } 
     
     private void FixedUpdate()
