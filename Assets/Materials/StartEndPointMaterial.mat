@@ -43,12 +43,12 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Metallic: 1
-    - _Smoothness: 1
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _Surface: 0
     - _WorkflowMode: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 1, b: 0, a: 0.5019608}
-    - _Color: {r: 0, g: 1, b: 0, a: 0.5019608}
+    - _BaseColor: {r: 1, g: 0, b: 0, a: 0.5019608}
+    - _Color: {r: 1, g: 0, b: 0, a: 0.5019608}
   m_BuildTextureStacks: []
