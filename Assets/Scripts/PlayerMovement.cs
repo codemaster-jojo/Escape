@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.name == endPointName) 
         {
+            transform.position = startPoint.transform.position; // new Vector3(startPoint.transform.x, startPoint.transform.y, startPoint.transform.z);
             Debug.Log("GAME WON!!!");
         }
 
