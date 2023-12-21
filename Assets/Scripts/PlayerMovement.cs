@@ -43,10 +43,14 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == endPointName) 
-        {
+        if (collision.gameObject.name == endPointName) {
             transform.position = startPoint.transform.position; // new Vector3(startPoint.transform.x, startPoint.transform.y, startPoint.transform.z);
             Debug.Log("GAME WON!!!");
+        }
+
+        if (collision.gameObject.name.StartsWith("Red")) {
+            transform.position = startPoint.transform.position; // new Vector3(startPoint.transform.x, startPoint.transform.y, startPoint.transform.z);
+            Debug.Log("DIED!!!!");
         }
 
     } 
