@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform startPoint;
     [SerializeField] private string endPointName;
+
+    [SerializeField] private TextMeshProUGUI attemptsText;  
+    private int attempts = 1;
 
 
     private Vector2 playerInput;
@@ -51,6 +55,10 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.name.StartsWith("Red")) {
             transform.position = startPoint.transform.position; // new Vector3(startPoint.transform.x, startPoint.transform.y, startPoint.transform.z);
             Debug.Log("DIED!!!!");
+            attempts++;
+
+            attemptsText.text = attempts.ToString() + " attempts";
+
         }
 
     } 
