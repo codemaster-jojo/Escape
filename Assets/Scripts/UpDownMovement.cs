@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SideToSideMovt : MonoBehaviour
+public class UpDownMovement : MonoBehaviour
 {
     [SerializeField] private float movtAmount;
     [SerializeField] private float endMovtAmount;
@@ -17,12 +17,12 @@ public class SideToSideMovt : MonoBehaviour
         if (moveDir) 
         {
             tempMovtAmount += speed;
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + speed);
+            transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
         }
         else 
         {
             tempMovtAmount -= speed;
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - speed);
+            transform.position = new Vector3(transform.position.x, transform.position.y - speed, transform.position.z);
         }
         
         if (tempMovtAmount <= endMovtAmount || tempMovtAmount >= movtAmount) 
