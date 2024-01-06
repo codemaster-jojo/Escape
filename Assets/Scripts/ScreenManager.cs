@@ -6,6 +6,8 @@ public class ScreenManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject loseScreen;
+    [SerializeField] private GameObject winScreen;
 
     private bool isPaused = false;
 
@@ -34,6 +36,8 @@ public class ScreenManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         mainMenu.SetActive(false);
+        loseScreen.SetActive(false);
+        winScreen.SetActive(false);
     }
 
     public void Unpause()

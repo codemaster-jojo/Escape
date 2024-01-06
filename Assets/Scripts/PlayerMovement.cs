@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string endPointName;
 
     [SerializeField] private TextMeshProUGUI attemptsText;  
+
+    [SerializeField] private GameObject loseScreen;
+    [SerializeField] private GameObject winScreen;
+
+
     private int attempts = 1;
 
 
@@ -50,11 +55,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.name == endPointName) {
             transform.position = startPoint.transform.position; // new Vector3(startPoint.transform.x, startPoint.transform.y, startPoint.transform.z);
             Debug.Log("GAME WON!!!");
+            winScreen.SetActive(true);
         }
 
         if (collision.gameObject.name.StartsWith("Red")) {
             transform.position = startPoint.transform.position; // new Vector3(startPoint.transform.x, startPoint.transform.y, startPoint.transform.z);
             Debug.Log("DIED!!!!");
+            loseScreen.SetActive(true);
             attempts++;
 
             attemptsText.text = attempts.ToString() + " attempts";
