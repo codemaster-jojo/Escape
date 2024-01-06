@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScreenManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject mainMenu;
 
     private bool isPaused = false;
 
@@ -12,6 +13,8 @@ public class ScreenManager : MonoBehaviour
     private void Awake()
     {
         pauseScreen.SetActive(isPaused);
+        mainMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     // Update is called once per frame
@@ -25,6 +28,12 @@ public class ScreenManager : MonoBehaviour
             }
             else Time.timeScale = 1.0f;
         }
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1.0f;
+        mainMenu.SetActive(false);
     }
 
     public void Unpause()
